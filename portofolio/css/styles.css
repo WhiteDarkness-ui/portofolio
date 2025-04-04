@@ -1,0 +1,428 @@
+/* 🔹 General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: white;
+    text-align: center;
+}
+/* Reduce excessive spacing */
+section {
+    padding: 50px 8%;
+}
+
+/* Adjust smaller screens */
+@media (max-width: 768px) {
+    section {
+        padding: 40px 5%;
+    }
+}
+
+
+/* 🔹 Hero Section */
+#hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+     position: relative;
+    height: 100vh; /* Full height of the viewport */
+    overflow: hidden; /* Prevent the Three.js canvas from pushing content */
+}
+
+#threeCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Make canvas take up the full width */
+    height: 100%; /* Make canvas take up the full height */
+    z-index: -1; /* Ensure it's behind other content */
+}
+#hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    background: linear-gradient(90deg, #00d4ff, #ff00c8);
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: fadeInUp 1s ease-out;
+}
+
+#hero p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    opacity: 0.8;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    margin-top: 20px;
+    font-size: 1rem;
+    background: #00d4ff;
+    color: #1e293b;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    background: #ff00c8;
+    color: white;
+}
+
+/* 🔹 Sections */
+section {
+    padding: 80px 10%;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    background: linear-gradient(90deg, #ff00c8, #00d4ff);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+/* Buttons */
+.btn {
+    display: inline-block;
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 10px;
+    transition: transform 0.3s, background 0.3s;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: var(--accent-color);
+    transform: scale(1.05);
+}
+
+/* Animations */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 🔹 Fix Project Grid */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* 🔹 Fix Filter Buttons */
+.filter-buttons {
+    margin-bottom: 20px;
+}
+
+.filter-btn {
+    background: #00d4ff;
+    color: #1e293b;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin: 5px;
+}
+
+.filter-btn:hover, .filter-btn.active {
+    background: #ff00c8;
+    color: white;
+}
+
+/* 🔹 Make Project Cards Look Better */
+.project {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 5px 15px rgba(0, 212, 255, 0.3);
+}
+
+.project img {
+    width: 100%;
+    max-height: 180px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* 🔹 Responsive Design */
+@media (max-width: 768px) {
+    section {
+        padding: 40px 5%;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* 🔹 Style Links Inside Frontend Projects */
+.frontend a {
+    display: inline-block;
+    background: #ff00c8; /* Neon Pink */
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s ease, transform 0.2s;
+    margin-top: 10px;
+}
+
+/* 🔹 Hover Effect */
+.frontend a:hover {
+    background: #00d4ff; /* Neon Blue */
+    transform: translateY(-3px);
+}
+
+
+#chatbox {
+    height: 200px;
+    overflow-y: auto;
+    padding: 10px;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* 🔹 Contact Form */
+#contactForm {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 0 auto;
+}
+
+#contactForm input, #contactForm textarea {
+    margin-bottom: 10px;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 1rem;
+}
+
+#contactForm input::placeholder, 
+#contactForm textarea::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+#contactForm button {
+    background: #00d4ff;
+    color: #1e293b;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#contactForm button:hover {
+    background: #ff00c8;
+    color: white;
+}
+
+/* 🔹 Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 🔹 Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    #contactForm {
+        width: 100%;
+    }
+}
+/* 🔹 Contact Section */
+#contact {
+    text-align: center;
+    padding: 60px 10%;
+}
+
+.contact-container {
+    background: rgba(0, 212, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#contact-form input,
+#contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #00d4ff;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+#contact-form textarea {
+    height: 100px;
+    resize: none;
+}
+
+#contact-form button {
+    background: #00d4ff;
+    color: #1e293b;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#contact-form button:hover {
+    background: #ff00c8;
+    color: white;
+}
+
+/* 🔹 Email Box */
+.email-box {
+    background: #008073;
+    padding: 5px 10px;
+    color: white;
+    border-radius: 5px;
+}
+
+/* 🔹 Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 🔹 Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #contact {
+        padding: 60px 5%;
+    }
+
+    .contact-container {
+        padding: 15px;
+    }
+
+    #contact-form {
+        width: 100%;
+    }
+}
+.btn {
+    background: #008073;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #005a4a;
+}
+
+/* 🔹 Email Box */
+.email-box {
+    background: #008073;
+    padding: 5px 10px;
+    color: white;
+    border-radius: 5px;
+}
+.chat-container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+#chatbox {
+    height: 200px;
+    overflow-y: auto;
+    padding: 10px;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    margin-bottom: 10px;
+}
+
+#userInput {
+    width: calc(100% - 80px);
+    padding: 10px;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.btn {
+    background: #00d4ff;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}

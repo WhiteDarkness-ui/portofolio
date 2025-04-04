@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <canvas id="threeCanvas"></canvas>
+        <h1>Welcome to My Portfolio</h1><br>
+        <p>Crafting innovative web experiences with modern technologies.</p>
+        <a href="#projects" class="btn">View Projects</a>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" style="text-align: center;">
+        <h2>My Projects</h2>
+         <!-- Filter Buttons -->
+        <div class="filter-buttons">
+            <button class="filter-btn active" onclick="filterProjects('all')">All</button>
+            <button class="filter-btn" onclick="filterProjects('frontend')">Frontend</button>
+            <button class="filter-btn" onclick="filterProjects('backend')">Backend</button>
+        </div>
+        <div class="project-grid">
+            <div class="project frontend">
+                <img src="images/screen1.jpg" alt="Project 1">
+                <h3>Frontend Project</h3>
+                <p>Responsive UI built with bootstrap and html/javascript.</p>
+                <a href="https://kaput-bat.surge.sh" target="_blank">View Project</a>
+            </div>
+            <div class="project frontend">
+                <img src="images/screen.jpg" alt="Project 1">
+                <h3>Frontend Project</h3>
+                <p>Responsive UI built with bootstrap and html/javascript.</p>
+                <a href="https://kaput-bat.surge.sh" target="_blank">View Project</a>
+            </div>
+            <div class="project backend">
+                <img src="images/screen2.jpg" alt="Project 2">
+                <h3>Backend Project</h3>
+                <p>REST API developed with Node.js & Express.</p>
+            </div>
+            <div class="project backend">
+                <img src="images/screen3.jpg" alt="Project 2">
+                <h3>Backend Project</h3>
+                <p>REST API developed with Node.js & Express.</p>
+            </div>
+            <div class="project backend">
+                <img src="images/screen4.jpg" alt="Project 2">
+                <h3>Backend Project</h3>
+                <p>REST API developed with Node.js & Express.</p>
+            </div>
+        </div>
+    </section>
+
+
+        <section id="chat">
+    <h2>Chat with My AI</h2>
+    <div class="chat-container">
+        <div id="chatbox"></div>
+        <input type="text" id="userInput" placeholder="Type a message...">
+        <button onclick="sendMessage()" class="btn">Send</button>
+    </div>
+</section>
+
+    <section id="contact">
+    <h2>Contact Me</h2>
+    <div class="contact-container">
+        <form id="contact-form">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </div><br>
+    <p>Email: <span class="email-box">praizeX360@gmail.com</span></p>
+</section>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>
+
+
